@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8R5zBzFWNPxXdWaJZmCxrPpsd7NkAryIDcLz8NxiYDDwDgrZ+PQmVFfOGUlw560x/gF/8iKLPUUP0OyNv32vXQ==",
+  "dgSpecHash": "KqU0yVlt6VZk+Od8onAdR9ZM/iAWal78irmCSA7Pqr1bYhkDMRai41i9S6X5figNX789b/o1DtxbxOmEWO+0fg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\iivan\\OneDrive\\Documentos\\GitHub\\Desafio03\\Part1Api\\Part1Api.csproj",
+  "projectFilePath": "C:\\Users\\iivan\\OneDrive\\Documentos\\GitHub\\Desafio03\\Parte1\\Part1Api\\Part1Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\iivan\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\iivan\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

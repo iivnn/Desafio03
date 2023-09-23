@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B7ISU3zb11VFqOXfNitrQkh6IAZ85kr6ThFbo3SZcAX7Cm4T7QVa8H9LInCL5tjx50Xu6fZRgIy8/DX/uSkJcA==",
+  "dgSpecHash": "6yuNpLErUQKTS0eqrtkRtDw/a/T7bFr4mFzLthqPNlx6LtKz26za7tDlgz99fjxsiRClAhCJHG8vJRs/bVqK/A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\iivan\\OneDrive\\Documentos\\GitHub\\Desafio03\\Part1Api.Library.Test\\Part1Api.Library.Test.csproj",
+  "projectFilePath": "C:\\Users\\iivan\\OneDrive\\Documentos\\GitHub\\Desafio03\\Parte1\\Part1Api.Library.Test\\Part1Api.Library.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\iivan\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
     "C:\\Users\\iivan\\.nuget\\packages\\microsoft.codecoverage\\17.5.0\\microsoft.codecoverage.17.5.0.nupkg.sha512",
