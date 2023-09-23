@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Part1Api.Library</id>
+    <version>1.0.0</version>
+    <authors>Part1Api.Library</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net6.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\iivan\OneDrive\Documentos\GitHub\Desafio03\Part1Api.Library\bin\Debug\net6.0\Part1Api.Library.dll" target="lib\net6.0\Part1Api.Library.dll" />
+  </files>
+</package>
