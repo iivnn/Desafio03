@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\iivan\\OneDrive\\Documentos\\GitHub\\Desafio03\\Parte1\\Parte1.csproj": {}
+    "C:\\Users\\iivan\\OneDrive\\Documentos\\GitHub\\Desafio03\\Parte1\\Parte1Desktop\\Parte1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\iivan\\OneDrive\\Documentos\\GitHub\\Desafio03\\Parte1\\Parte1.csproj": {
+    "C:\\Users\\iivan\\OneDrive\\Documentos\\GitHub\\Desafio03\\Parte1\\Parte1Desktop\\Parte1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\iivan\\OneDrive\\Documentos\\GitHub\\Desafio03\\Parte1\\Parte1.csproj",
+        "projectUniqueName": "C:\\Users\\iivan\\OneDrive\\Documentos\\GitHub\\Desafio03\\Parte1\\Parte1Desktop\\Parte1.csproj",
         "projectName": "Parte1",
-        "projectPath": "C:\\Users\\iivan\\OneDrive\\Documentos\\GitHub\\Desafio03\\Parte1\\Parte1.csproj",
+        "projectPath": "C:\\Users\\iivan\\OneDrive\\Documentos\\GitHub\\Desafio03\\Parte1\\Parte1Desktop\\Parte1.csproj",
         "packagesPath": "C:\\Users\\iivan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\iivan\\OneDrive\\Documentos\\GitHub\\Desafio03\\Parte1\\obj\\",
+        "outputPath": "C:\\Users\\iivan\\OneDrive\\Documentos\\GitHub\\Desafio03\\Parte1\\Parte1Desktop\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
