@@ -1,0 +1,260 @@
+<h1>Films</h1>
+
+<div *ngIf="results.length == 0" style="display: flex; justify-content: center; margin-top: 100px">
+  <div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+
+<div class="accordion" id="accordionExample">
+  <div *ngFor="let film of results">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" attr.data-bs-target="#collapse{{ film.episode_id }}" aria-expanded="false" attr.aria-controls="collapse{{ film.episode_id }}">
+          {{ film.title }}
+        </button>
+      </h2>
+      <div id="collapse{{ film.episode_id }}" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <p>{{ film.opening_crawl }}</p>
+          <p><strong>Director:</strong> {{ film.director }}</p>
+          <p><strong>Producer:</strong> {{ film.producer }}</p>
+          <p><strong>Release:</strong> {{ film.release_date }}</p>
+
+
+          <div class="accordion accordion-flush" id="accordionFlushCha">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" attr.data-bs-target="#flush-collapse{{ film.episode_id }}cha" aria-expanded="false" attr.aria-controls="flush-collapse{{ film.episode_id }}cha" (click)="getFilmCharacters(film.episode_id)">
+                  Characters
+                </button>
+              </h2>
+              <div id="flush-collapse{{ film.episode_id }}cha" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCha">
+                <div class="accordion-body">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Height</th>
+                        <th scope="col">Mass</th>
+                        <th scope="col">Hair Color</th>
+                        <th scope="col">Skin Color</th>
+                        <th scope="col">Eye Color</th>
+                        <th scope="col">Birth Year</th>
+                        <th scope="col">Gender</th>
+                      </tr>
+                    </thead>
+                    <tbody *ngFor="let character of film.charactersInfo; index as i">
+                      <tr>
+                        <th scope="row">{{ i + 1}}</th>
+                        <td>{{ character.name }}</td>
+                        <td>{{ character.height }}</td>
+                        <td>{{ character.mass }}</td>
+                        <td>{{ character.hair_color }}</td>
+                        <td>{{ character.skin_color }}</td>
+                        <td>{{ character.eye_color }}</td>
+                        <td>{{ character.birth_year }}</td>
+                        <td>{{ character.gender }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion accordion-flush" id="accordionFlushPla">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" attr.data-bs-target="#flush-collapse{{ film.episode_id }}pla" aria-expanded="false" attr.aria-controls="flush-collapse{{ film.episode_id }}pla" (click)="getFilmPlanets(film.episode_id)">
+                  Planets
+                </button>
+              </h2>
+              <div id="flush-collapse{{ film.episode_id }}pla" class="accordion-collapse collapse" data-bs-parent="#accordionFlushPla">
+                <div class="accordion-body">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Rotation Period</th>
+                        <th scope="col">Orbital Period</th>
+                        <th scope="col">Diameter</th>
+                        <th scope="col">Climate</th>
+                        <th scope="col">Gravity</th>
+                        <th scope="col">Terrain</th>
+                        <th scope="col">Surface Water</th>
+                        <th scope="col">Population</th>
+                      </tr>
+                    </thead>
+                    <tbody *ngFor="let planet of film.planetsInfo; index as i">
+                      <tr>
+                        <th scope="row">{{ i + 1}}</th>
+                        <td>{{ planet.name }}</td>
+                        <td>{{ planet.rotation_period }}</td>
+                        <td>{{ planet.orbital_period }}</td>
+                        <td>{{ planet.diameter }}</td>
+                        <td>{{ planet.climate }}</td>
+                        <td>{{ planet.gravity }}</td>
+                        <td>{{ planet.terrain }}</td>
+                        <td>{{ planet.surface_water }}</td>
+                        <td>{{ planet.population }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion accordion-flush" id="accordionFlushSta">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" attr.data-bs-target="#flush-collapse{{ film.episode_id }}sta" aria-expanded="false" attr.aria-controls="flush-collapse{{ film.episode_id }}sta" (click)="getFilmStarships(film.episode_id)">
+                  Starships
+                </button>
+              </h2>
+              <div id="flush-collapse{{ film.episode_id }}sta" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSta">
+                <div class="accordion-body">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Model</th>
+                        <th scope="col">Manufacturer</th>
+                        <th scope="col">Cost in Credits</th>
+                        <th scope="col">Length</th>
+                        <th scope="col">Max Atmosphering Speed</th>
+                        <th scope="col">Crew</th>
+                        <th scope="col">Passengers</th>
+                        <th scope="col">Cargo Capacity</th>
+                        <th scope="col">Consumables</th>
+                        <th scope="col">Hyperdrive Rating</th>
+                        <th scope="col">MGLT</th>
+                        <th scope="col">Starship Class</th>
+
+                      </tr>
+                    </thead>
+                    <tbody *ngFor="let starship of film.starshipsInfo; index as i">
+                      <tr>
+                        <th scope="row">{{ i + 1}}</th>
+                        <td>{{ starship.name }}</td>
+                        <td>{{ starship.model }}</td>
+                        <td>{{ starship.manufacturer }}</td>
+                        <td>{{ starship.cost_in_credits }}</td>
+                        <td>{{ starship.length }}</td>
+                        <td>{{ starship.max_atmosphering_speed }}</td>
+                        <td>{{ starship.crew }}</td>
+                        <td>{{ starship.passengers }}</td>
+                        <td>{{ starship.cargo_capacity }}</td>
+                        <td>{{ starship.consumables }}</td>
+                        <td>{{ starship.hyperdrive_rating }}</td>
+                        <td>{{ starship.MGLT }}</td>
+                        <td>{{ starship.starship_class }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion accordion-flush" id="accordionFlushSta">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" attr.data-bs-target="#flush-collapse{{ film.episode_id }}veh" aria-expanded="false" attr.aria-controls="flush-collapse{{ film.episode_id }}veh" (click)="getFilmVehicles(film.episode_id)">
+                  Vehicles
+                </button>
+              </h2>
+              <div id="flush-collapse{{ film.episode_id }}veh" class="accordion-collapse collapse" data-bs-parent="#accordionFlushVeh">
+                <div class="accordion-body">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Model</th>
+                        <th scope="col">Manufacturer</th>
+                        <th scope="col">Cost in Credits</th>
+                        <th scope="col">Length</th>
+                        <th scope="col">Max Atmosphering Speed</th>
+                        <th scope="col">Crew</th>
+                        <th scope="col">Passengers</th>
+                        <th scope="col">Cargo Capacity</th>
+                        <th scope="col">Consumables</th>
+                        <th scope="col">Vehicle Class</th>
+                      </tr>
+                    </thead>
+                    <tbody *ngFor="let vehicle of film.vehiclesInfo; index as i">
+                      <tr>
+                        <th scope="row">{{ i + 1}}</th>
+                        <td>{{ vehicle.name }}</td>
+                        <td>{{ vehicle.model }}</td>
+                        <td>{{ vehicle.manufacturer }}</td>
+                        <td>{{ vehicle.cost_in_credits }}</td>
+                        <td>{{ vehicle.length }}</td>
+                        <td>{{ vehicle.max_atmosphering_speed }}</td>
+                        <td>{{ vehicle.crew }}</td>
+                        <td>{{ vehicle.passengers }}</td>
+                        <td>{{ vehicle.cargo_capacity }}</td>
+                        <td>{{ vehicle.consumables }}</td>
+                        <td>{{ vehicle.vehicle_class }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion accordion-flush" id="accordionFlushSta">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" attr.data-bs-target="#flush-collapse{{ film.episode_id }}spe" aria-expanded="false" attr.aria-controls="flush-collapse{{ film.episode_id }}spe" (click)="getFilmSpecies(film.episode_id)">
+                  Species
+                </button>
+              </h2>
+              <div id="flush-collapse{{ film.episode_id }}spe" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSpe">
+                <div class="accordion-body">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Classification</th>
+                        <th scope="col">Designation</th>
+                        <th scope="col">Average Height</th>
+                        <th scope="col">Skin Colors</th>
+                        <th scope="col">Hair Colors</th>
+                        <th scope="col">Eye Colors</th>
+                        <th scope="col">Average Lifespan</th>
+                        <th scope="col">Language</th>
+                      </tr>
+                    </thead>
+                    <tbody *ngFor="let specie of film.speciesInfo; index as i">
+                      <tr>
+                        <th scope="row">{{ i + 1}}</th>
+                        <td>{{ specie.name }}</td>
+                        <td>{{ specie.classification }}</td>
+                        <td>{{ specie.designation }}</td>
+                        <td>{{ specie.average_height }}</td>
+                        <td>{{ specie.skin_colors }}</td>
+                        <td>{{ specie.hair_colors }}</td>
+                        <td>{{ specie.eye_colors }}</td>
+                        <td>{{ specie.average_lifespan }}</td>
+                        <td>{{ specie.language }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
